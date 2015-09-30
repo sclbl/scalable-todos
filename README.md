@@ -1,5 +1,5 @@
 # Scalable Todos
-This Modules adds a basic todo functionality to the Scalable system. 
+This module adds a basic todo functionality to the Scalable system. 
 
 ## Usage
 Just fill out the variables in the settings.json file.
