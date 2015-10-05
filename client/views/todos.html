@@ -1,0 +1,35 @@
+<template name="todos">
+  {{#if todosAvailable}}
+    {{#if undoneTodos.count}}
+      <ul>
+        {{#each undoneTodos}}
+          <li>
+            <span>{{body}}</span>
+            <span class="u-pull-right">
+              <button type="button" class="todo-action" data-action="done"><i class="fa fa-check fa-lg"></i></button>
+              <button type="button" class="todo-action" data-action="remove"><i class="fa fa-trash fa-lg"></i></button>
+            </span>
+          </li>
+        {{/each}}
+      </ul>
+    {{/if}}
+    <hr />
+    {{#if doneTodos.count}}
+      <ul>
+        {{#each doneTodos}}
+          <li>
+            <span class="done">{{body}}</span>
+            <span class="u-pull-right">
+              <button type="button" class="todo-action" data-action="not-done"><i class="fa fa-undo fa-lg"></i></button>
+              <button type="button" class="todo-action" data-action="remove"><i class="fa fa-trash fa-lg"></i></button>
+            </span>
+          </li>
+        {{/each}}
+      </ul>
+    {{/if}}
+  {{else}}
+    <div class="no-todos-available text-center">
+      There are no Todos to show...
+    </div>
+  {{/if}}
+</template>
