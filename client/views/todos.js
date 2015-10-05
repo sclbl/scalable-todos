@@ -8,7 +8,9 @@ Template.todos.events({
   },
 
   'click [data-action=remove]': function (event, template) {
-    Todos.remove({ _id: this._id });
+    if (confirm('Do you really want to remove this todo?')) {
+      Todos.remove({ _id: this._id });
+    }
   }
 });
 
