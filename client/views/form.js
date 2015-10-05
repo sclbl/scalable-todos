@@ -4,9 +4,7 @@ Template.form.events({
 
     const body = template.find('#body').value;
 
-    if (body.length !== 0) {
-      Todos.insert({ body: template.find('#body').value, createdAt: new Date(), isDone: false });
-      template.find('#body').value = '';
-    }
+    Todos.insert({ body: template.find('#body').value, createdAt: new Date(), isDone: false });
+    template.find('#body').value = '';
   }
 });
